@@ -1,5 +1,5 @@
 .PHONY : main build-image build-container start test shell stop clean
-main: clean build-image build-container
+main: build-image build-container
 
 build-image:
 	docker build -t fizzbuzz .
