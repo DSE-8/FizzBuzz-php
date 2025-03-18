@@ -11,6 +11,9 @@ class FizzBuzz
         if($value%15==0){
             return 'FizzBuzz';
         } 
+        if($this->contains($value,5)){
+            return 'Buzz';
+        } 
         if($value%5==0){
             return 'Buzz';
         } 

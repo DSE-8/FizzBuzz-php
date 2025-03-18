@@ -53,6 +53,16 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
+    public function numberThatContainsFiveReturnsBuzz(){
+        $fizzBuzz = new FizzBuzz();
+
+        $convertedValue = $fizzBuzz->convert(52);
+
+        assertEquals('Buzz',$convertedValue);
+    }
+    /**
+     * @test
+     */
     public function multipleOfFiveAndThreeReturnsFizzBuzz(){
         $fizzBuzz = new FizzBuzz();
 
