@@ -26,7 +26,17 @@ final class FizzBuzzTest extends TestCase
     public function multipleOfThreeReturnsFizz(){
         $fizzBuzz = new FizzBuzz();
 
-        $convertedValue = $fizzBuzz->convert(3);
+        $convertedValue = $fizzBuzz->convert(6);
+
+        assertEquals('Fizz',$convertedValue);
+    }
+    /**
+     * @test
+     */
+    public function numberThatContainsThreeReturnsFizz(){
+        $fizzBuzz = new FizzBuzz();
+
+        $convertedValue = $fizzBuzz->convert(13);
 
         assertEquals('Fizz',$convertedValue);
     }
@@ -36,7 +46,7 @@ final class FizzBuzzTest extends TestCase
     public function multipleOfFiveReturnsBuzz(){
         $fizzBuzz = new FizzBuzz();
 
-        $convertedValue = $fizzBuzz->convert(5);
+        $convertedValue = $fizzBuzz->convert(10);
 
         assertEquals('Buzz',$convertedValue);
     }
@@ -46,7 +56,7 @@ final class FizzBuzzTest extends TestCase
     public function multipleOfFiveAndThreeReturnsFizzBuzz(){
         $fizzBuzz = new FizzBuzz();
 
-        $convertedValue = $fizzBuzz->convert(15);
+        $convertedValue = $fizzBuzz->convert(60);
 
         assertEquals('FizzBuzz',$convertedValue);
     }
