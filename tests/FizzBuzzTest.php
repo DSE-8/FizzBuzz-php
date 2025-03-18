@@ -10,63 +10,64 @@ use function PHPUnit\Framework\assertEquals;
 
 final class FizzBuzzTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function OtherReturnsItself(){
-        $fizzBuzz = new FizzBuzz();
-
-        $convertedValue = $fizzBuzz->convert(1);
-
-        assertEquals(1,$convertedValue);
+    private FizzBuzz $fizzBuzz;
+    protected function setUp(): void{
+        parent::setup();
+        $this->fizzBuzz = new FizzBuzz();
     } 
     /**
      * @test
      */
-    public function multipleOfThreeReturnsFizz(){
-        $fizzBuzz = new FizzBuzz();
+    public function notMultipleOfBuzzNumberOrFizzNumberOrContainsThemReturnsItself(){
+        $convertedValue = $this->fizzBuzz->convert(1);
 
-        $convertedValue = $fizzBuzz->convert(6);
+        assertEquals(1,$convertedValue);
+    }
+    /**
+     * @test
+     */
+    public function multipleOfFizzNumberReturnsFizz(){
+        $convertedValue = $this->fizzBuzz->convert(6);
 
         assertEquals('Fizz',$convertedValue);
     }
     /**
      * @test
      */
-    public function numberThatContainsThreeReturnsFizz(){
-        $fizzBuzz = new FizzBuzz();
-
-        $convertedValue = $fizzBuzz->convert(13);
+    public function numberThatContainsFizzNumberReturnsFizz(){
+        $convertedValue = $this->fizzBuzz->convert(13);
 
         assertEquals('Fizz',$convertedValue);
     }
     /**
      * @test
      */
-    public function multipleOfFiveReturnsBuzz(){
-        $fizzBuzz = new FizzBuzz();
-
-        $convertedValue = $fizzBuzz->convert(10);
+    public function multipleOfBuzzNumberReturnsBuzz(){
+        $convertedValue = $this->fizzBuzz->convert(10);
 
         assertEquals('Buzz',$convertedValue);
     }
     /**
      * @test
      */
-    public function numberThatContainsFiveReturnsBuzz(){
-        $fizzBuzz = new FizzBuzz();
-
-        $convertedValue = $fizzBuzz->convert(52);
+    public function numberThatContainsBuzzNumberReturnsBuzz(){
+        $convertedValue = $this->fizzBuzz->convert(52);
 
         assertEquals('Buzz',$convertedValue);
     }
     /**
      * @test
      */
-    public function multipleOfFiveAndThreeReturnsFizzBuzz(){
-        $fizzBuzz = new FizzBuzz();
+    public function multipleOfBuzzNumberAndFizzNumberReturnsFizzBuzz(){
+        $convertedValue = $this->fizzBuzz->convert(60);
 
-        $convertedValue = $fizzBuzz->convert(60);
+        assertEquals('FizzBuzz',$convertedValue);
+    }
+    /**
+     * @test
+     */
+    public function numberThatContainsBuzzNumberAndFizzNumberReturnsFizzBuzz(){
+        $convertedValue = $this->fizzBuzz->convert(53);
 
         assertEquals('FizzBuzz',$convertedValue);
     }
