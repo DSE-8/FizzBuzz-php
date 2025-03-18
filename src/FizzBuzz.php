@@ -5,6 +5,9 @@ namespace Deg540\CleanCodeKata9;
 class FizzBuzz
 {
     public function convert(int $value){
+        if($value%15==0){
+            return 'FizzBuzz';
+        } 
         if($value%5==0){
             return 'Buzz';
         } 

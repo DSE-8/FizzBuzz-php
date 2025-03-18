@@ -40,4 +40,14 @@ final class FizzBuzzTest extends TestCase
 
         assertEquals('Buzz',$convertedValue);
     }
+    /**
+     * @test
+     */
+    public function multipleOfFiveAndThreeReturnsFizzBuzz(){
+        $fizzBuzz = new FizzBuzz();
+
+        $convertedValue = $fizzBuzz->convert(15);
+
+        assertEquals('FizzBuzz',$convertedValue);
+    }
 }
