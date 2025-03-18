@@ -13,11 +13,21 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function from1To1(){
+    public function OtherReturnsItself(){
         $fizzBuzz = new FizzBuzz();
 
         $convertedValue = $fizzBuzz->convert(1);
 
         assertEquals(1,$convertedValue);
     } 
+    /**
+     * @test
+     */
+    public function multipleOfThreeReturnsFizz(){
+        $fizzBuzz = new FizzBuzz();
+
+        $convertedValue = $fizzBuzz->convert(3);
+
+        assertEquals('Fizz',$convertedValue);
+    }
 }
