@@ -7,7 +7,10 @@ use function PHPUnit\Framework\equalTo;
 
 class FizzBuzz
 {
-    public function getList(){
+    public function getList(String $action){
+        if($action=="añadir pan"){
+            return "pan x1";
+        } 
         return '';
     } 
 }

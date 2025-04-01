@@ -16,8 +16,18 @@ final class FizzBuzzTest extends TestCase
     public function givenNothingReturnsEmptyString(){
         $ListaDeLaCompra = new FizzBuzz();
 
-        $convertedValue = $ListaDeLaCompra->getList();
+        $convertedValue = $ListaDeLaCompra->getList('');
 
         assertEquals('',$convertedValue);
+    }
+    /**
+     * @test
+     */
+    public function addingOnePanReturnsPan(){
+        $ListaDeLaCompra = new FizzBuzz();
+
+        $convertedValue = $ListaDeLaCompra->getList("añadir pan");
+
+        assertEquals("pan x1",$convertedValue);
     }
 }
