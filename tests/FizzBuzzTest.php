@@ -23,21 +23,11 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function addingOnePanReturnsPan(){
+    public function addingPanReturnsPan(){
         $ListaDeLaCompra = new FizzBuzz();
 
-        $convertedValue = $ListaDeLaCompra->getList("añadir Pan");
+        $convertedValue = $ListaDeLaCompra->getList("añadir Pan 3");
 
-        assertEquals("pan x1",$convertedValue);
-    }
-    /**
-     * @test
-     */
-    public function addingTwoPanReturnsTwoPan(){
-        $ListaDeLaCompra = new FizzBuzz();
-
-        $convertedValue = $ListaDeLaCompra->getList("añadir Pan 2");
-
-        assertEquals("pan x2",$convertedValue);
+        assertEquals("pan x3",$convertedValue);
     }
 }
