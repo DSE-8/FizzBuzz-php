@@ -13,9 +13,14 @@ class FizzBuzz
         $accion = strtolower($action);
         $accionArray = preg_split("/[ ]/",$accion);
         if($accionArray[0] == "vaciar"){
+            $this->count = 0;
             return '';
         } 
         if($accionArray[0] == "eliminar"){
+            if($this->count > 0){
+                $this->count = 0;
+                return '';
+            } 
             return 'El producto seleccionado no existe';
         } 
         if($accionArray[0] != "añadir"){
