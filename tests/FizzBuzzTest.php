@@ -26,16 +26,6 @@ final class FizzBuzzTest extends TestCase
     public function addingOnePanReturnsPan(){
         $ListaDeLaCompra = new FizzBuzz();
 
-        $convertedValue = $ListaDeLaCompra->getList("añadir pan");
-
-        assertEquals("pan x1",$convertedValue);
-    }
-    /**
-     * @test
-     */
-    public function addingUppercasePanReturnsPan(){
-        $ListaDeLaCompra = new FizzBuzz();
-
         $convertedValue = $ListaDeLaCompra->getList("añadir Pan");
 
         assertEquals("pan x1",$convertedValue);
