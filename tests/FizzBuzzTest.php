@@ -34,6 +34,16 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
+    public function deletingPanFromEmptyListReturnsNotExistingErrorString(){
+        $ListaDeLaCompra = new FizzBuzz();
+
+        $convertedValue = $ListaDeLaCompra->getList("eliminar Pan");
+
+        assertEquals("El producto seleccionado no existe",$convertedValue);
+    }
+    /**
+     * @test
+     */
     public function givenStringVaciarReturnsEmptyString(){
         $ListaDeLaCompra = new FizzBuzz();
         $convertedValue = $ListaDeLaCompra->getList("añadir Pan");

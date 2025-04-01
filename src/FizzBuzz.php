@@ -15,6 +15,9 @@ class FizzBuzz
         if($accionArray[0] == "vaciar"){
             return '';
         } 
+        if($accionArray[0] == "eliminar"){
+            return 'El producto seleccionado no existe';
+        } 
         if($accionArray[0] != "añadir"){
             return '';
         } 
