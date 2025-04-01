@@ -1,5 +1,5 @@
 {
-    "name": "deg540/cleancode-kata-9",
+    "name": "deg540/fizzbuzz",
     "description": "Clean code Kata cap. 9. Unit testing",
     "type": "project",
     "require": {
