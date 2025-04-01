@@ -12,6 +12,9 @@ class FizzBuzz
     public function getList(String $action){
         $accion = strtolower($action);
         $accionArray = preg_split("/[ ]/",$accion);
+        if($accionArray[0] == "vaciar"){
+            return '';
+        } 
         if($accionArray[0] != "añadir"){
             return '';
         } 

@@ -31,4 +31,15 @@ final class FizzBuzzTest extends TestCase
 
         assertEquals("pan x4",$convertedValue);
     }
+    /**
+     * @test
+     */
+    public function givenStringVaciarReturnsEmptyString(){
+        $ListaDeLaCompra = new FizzBuzz();
+        $convertedValue = $ListaDeLaCompra->getList("añadir Pan");
+
+        $convertedValue = $ListaDeLaCompra->getList("vaciar");
+
+        assertEquals("",$convertedValue);
+    }
 }
