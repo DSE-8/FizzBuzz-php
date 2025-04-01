@@ -8,7 +8,7 @@ use function PHPUnit\Framework\equalTo;
 class FizzBuzz
 {
     public function getList(String $action){
-        if($action=="añadir pan"){
+        if(strtolower($action)=="añadir pan"){
             return "pan x1";
         } 
         return '';
